@@ -1,7 +1,21 @@
+using Equinox.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRouting(options =>
+{
+    options.LowercaseUrls = true;
+    options.AppendTrailingSlash = true;
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession();
+
+builder.Services.AddDbContext<EquinoxDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("EquinoxDbContext")));
 
 var app = builder.Build();
 
@@ -14,11 +28,13 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+
 app.UseRouting();
+app.UseSession();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
 
 app.MapAreaControllerRoute(
     name: "admin",
@@ -27,8 +43,7 @@ app.MapAreaControllerRoute(
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=EquiClass}/{action=Index}/{id?}");
 
 
 app.Run();

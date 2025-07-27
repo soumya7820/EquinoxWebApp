@@ -1,0 +1,65 @@
+﻿@model Equinox.Models.EquinoxViewModel
+
+@{
+    ViewData["Title"] = "Your Cart";
+}
+
+<h2 class="text-center p-3">Your Class Bookings</h2>
+
+@if (Model.Bookings == null || !Model.Bookings.Any())
+{
+    <div class="alert alert-info text-center">
+        Your cart is empty.
+    </div>
+}
+else
+{
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark text-center">
+            <tr>
+                <th>Picture</th>
+                <th>Class Name</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Club</th>
+                <th>Category</th>
+                <th>Coach</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="text-center align-middle">
+            @foreach (var booking in Model.Bookings)
+            {
+                var cls = booking.EquinoxClass;
+                <tr>
+                    <td>
+                        <img src="~/Images/@cls.ClassPicture" alt="@cls.Name" style="height: 100px; width: 100px; object-fit: cover;" />
+                    </td>
+                    <td>@cls.Name</td>
+                    <td>@cls.ClassDay</td>
+                    <td>@cls.Time</td>
+                    <td>@cls.Club?.Name</td>
+                    <td>@cls.ClassCategory?.Name</td>
+                    <td>@cls.User?.Name</td>
+                    <td>
+                        <a href="@Url.Action("RemoveFromCart", "EquiClass", new { id = cls.EquinoxClassId })"
+                           class="btn btn-sm btn-danger">
+                            Remove
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="text-center mt-4">
+        <form asp-action="ConfirmReserve" asp-controller="EquiClass" method="post">
+            <a asp-controller="EquiClass" asp-action="Index"
+               asp-route-activeClub="@Model.ActiveClub"
+               asp-route-activeClassCategory="@Model.ActiveClassCategory"
+               class="btn btn-primary me-2">
+                Return to Home
+            </a>
+        </form>
+    </div>
+}

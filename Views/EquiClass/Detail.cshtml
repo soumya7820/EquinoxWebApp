@@ -1,0 +1,47 @@
+﻿@model Equinox.Models.EquinoxViewModel
+@{
+    ViewData["Title"] = "Class Details";
+}
+
+<h2 class="text-center p-2">Class Details</h2>
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <ul class="list-group text-center">
+            <li class="list-group-item">
+                <img src="~/Images/@Model.EquinoxClasses.ClassPicture" alt="" />
+                <h3>@Model.EquinoxClasses.Name</h3>
+            </li>
+            <li class="list-group-item">
+                <h4>Name: @Model.EquinoxClasses.Name</h4>
+            </li>
+            <li class="list-group-item">
+                <h4>ClassDay: @Model.EquinoxClasses.ClassDay</h4>
+            </li>
+            <li class="list-group-item">
+                <h4>Class Time: @Model.EquinoxClasses.Time</h4>
+            </li>
+            <li class="list-group-item">
+                <h4>Club: @Model.EquinoxClasses.Club.Name</h4>
+            </li>
+            <li class="list-group-item">
+                <h4>ClassCategory: @Model.EquinoxClasses.ClassCategory.Name</h4>
+            </li>
+            <li class="list-group-item">
+                <h4>Coach: @Model.EquinoxClasses.User.Name</h4>
+            </li>
+            <li class="list-group-item">
+                <form asp-action="BookClass" asp-controller="EquiClass" method="post">
+                    <a asp-action="Index" class="btn btn-primary"
+                       asp-route-activeClub="@Model.ActiveClub"
+                       asp-route-activeClassCategory="@Model.ActiveClassCategory">Return to Home Page</a>
+                    <button type="submit" class="btn btn-primary">
+                        Book Class
+                    </button>
+                    <input type="hidden" name="id" value="@Model.EquinoxClasses.EquinoxClassId" />
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+

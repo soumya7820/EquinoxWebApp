@@ -1,0 +1,101 @@
+﻿@using Equinox.Models;
+@model Equinox.Models.EquinoxViewModel
+
+@{
+    ViewData["Title"] = "Book Class";
+}
+
+<div class="row">
+
+
+    <div class="col-md-3">
+        <div>
+            <h1>Book Class</h1>
+        </div>
+        <form method="post" asp-action="Index" asp-controller="EquiClass">
+            <div class="mb-3">
+                <label class="form-label"><b>Club:</b></label>
+                <select name="activeClub" class="form-control">
+                    <option value="all" class="@Model.CheckActiveClub("all")">All</option>
+                    @foreach (Club C in Model.Club)
+                    {
+                        if (Model.ActiveClub == C.ClubId.ToString())
+                        {
+                            <option value="@C.ClubId" selected="true" class="@Model.CheckActiveClub(C.ClubId.ToString())">
+                                @C.Name
+                            </option>
+                        }
+                        else
+                        {
+                            <option value="@C.ClubId" class="@Model.CheckActiveClub(C.ClubId.ToString())">
+                                @C.Name
+                            </option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>ClassCategory:</b></label>
+                <select name="activeClassCategory" class="form-control">
+                    <option value="all" class="@Model.CheckActiveClassCategory("all")">All</option>
+                    @foreach (ClassCategory C in Model.ClassCategory)
+                    {
+                        if (Model.ActiveClassCategory == C.ClassCategoryId.ToString())
+                        {
+                            <option value="@C.ClassCategoryId" selected="true" class="@Model.CheckActiveClassCategory(C.ClassCategoryId.ToString())">
+                                @C.Name
+                            </option>
+                        }
+                        else
+                        {
+                            <option value="@C.ClassCategoryId" class="@Model.CheckActiveClassCategory(C.ClassCategoryId.ToString())">
+                                @C.Name
+                            </option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Filter</button>
+                <a asp-action="Index" asp-route-id="" class="btn btn-primary">Clear</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-9">
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>ClassDay</th>
+                    <th>Time</th>
+                    <th>ClassCategory</th>
+                    <th>Club</th>
+                    <th>User</th>
+                    <th>ClassPicture</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var equi in Model.EquinoxClass)
+                {
+                    <tr>
+                        <td>@equi.Name</td>
+                        <td>@equi.ClassDay</td>
+                        <td>@equi.Time</td>
+                        <td>@equi.Club.Name</td>
+                        <td>@equi.ClassCategory.Name</td>
+                        <td>@equi.User.Name</td>
+                        <td><img src="~/Images/@(equi.ClassPicture)" alt="@equi.ClassPicture" class="Wimage" /></td>
+                        <td>
+                            <a asp-controller="EquiClass" asp-action="Detail"
+                               asp-route-id="@equi.EquinoxClassId">Details</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

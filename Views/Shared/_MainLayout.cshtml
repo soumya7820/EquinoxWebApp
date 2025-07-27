@@ -1,4 +1,5 @@
-﻿@{
+﻿@using Equinox.Models
+@{
     Layout = "_Layout";
 
     string controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
@@ -19,20 +20,37 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Club" asp-action="List">Clubs</a>
+                        <a class="nav-link @(controller == "Club" && action == "List" ? "active" : "")"
+                           asp-controller="Club" asp-action="List">Clubs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Class" asp-action="List">Classes</a>
+                        <a class="nav-link @(controller == "Class" && action == "List" ? "active" : "")"
+                           asp-controller="Class" asp-action="List">Classes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Membership" asp-action="List">Membership</a>
+                        <a class="nav-link @(controller == "Membership" && action == "List" ? "active" : "")"
+                           asp-controller="Membership" asp-action="List">Membership</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="PrivateClass" asp-action="List">Private Training</a>
+                        <a class="nav-link @(controller == "PrivateClass" && action == "List" ? "active" : "")"
+                           asp-controller="PrivateClass" asp-action="List">Private Training</a>
                     </li>
                 </ul>
 
                 <ul class="navbar-nav ms-auto">
+                    @{
+                        var cart = EquinoxCookies.GetReservationItemsFromCookie(Context.Request, "PreReservationCart");
+                        var cartCount = cart.Count;
+
+                    }
+                    <a asp-controller="EquiClass" asp-action="Cart" class="nav-item nav-link">
+                        Cart
+                        <i class="fa fa-shopping-cart"></i>
+                        @if (cartCount > 0)
+                        {
+                            <span class="badge bg-light text-black">@cartCount</span>
+                        }
+                    </a>
                     <li class="nav-item">
                         <a class="nav-link @(controller == "Admin" ? "active" : "")"
                            asp-area="Admin" asp-controller="Home" asp-action="Index">Admin</a>
@@ -44,6 +62,13 @@
 </header>
 
 <main>
+    @if (TempData.Keys.Contains("Message"))
+    {
+        <div class="alert alert-success alert-dismissible fade show mt-5" role="alert">
+            <strong>@TempData["Message"]</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
     @RenderBody()
 </main>
 
