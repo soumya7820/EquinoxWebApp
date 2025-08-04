@@ -1,9 +1,12 @@
-﻿namespace Equinox.Models
+﻿using System.Text.Json;
+
+namespace Equinox.Models
 {
     public class EquinoxSession
     {
-        private const string ClubsKey = "MetropolisKey";
-        private const string ClassCategoryKey = "PriceRangeKey";
+        private const string ClubsKey = "ClubsKey";
+        private const string ClassCategoryKey = "ClassCategoryKey";
+        private const string CartKey = "Cart";
 
         private ISession session { get; set; }
         public EquinoxSession(ISession session) => this.session = session;
@@ -15,5 +18,20 @@
             session.SetString(ClassCategoryKey, activeClassCategory);
         public string GetActiveClassCategory() =>
             session.GetString(ClassCategoryKey) ?? string.Empty;
+
+        public List<Booking> Bookings
+        {
+            get
+            {
+                var data = session.GetString(CartKey);
+                return string.IsNullOrEmpty(data)
+                    ? new List<Booking>()
+                    : JsonSerializer.Deserialize<List<Booking>>(data) ?? new List<Booking>();
+            }
+            set
+            {
+                session.SetString(CartKey, JsonSerializer.Serialize(value));
+            }
+        }
     }
 }

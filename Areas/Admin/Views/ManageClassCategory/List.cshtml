@@ -1,0 +1,30 @@
+﻿@model List<Equinox.Models.ClassCategory>
+@{
+    ViewData["Title"] = "My ClassCategory";
+}
+<div class="mb-2">
+    <a asp-controller="ManageClassCategory" asp-action="Add">Add New ClassCategory</a>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Image</th><th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var classCategory in Model) {
+            <tr>
+                <td>@classCategory.Name</td>
+                <td>@classCategory.Image</td>
+                <td>
+                    <a asp-controller="ManageClassCategory" asp-action="Edit"
+                       asp-route-id="@classCategory.ClassCategoryId">Edit</a>
+                    <a asp-controller="ManageClassCategory" asp-action="Delete"
+                       asp-route-id="@classCategory.ClassCategoryId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

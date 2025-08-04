@@ -1,0 +1,15 @@
+﻿@model Equinox.Models.Club
+@{
+    ViewData["Title"] = "Delete Club";
+}
+
+<h2>Confirm Deletion</h2>
+<h3>@Model.Name (@Model.Name)</h3>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="ClubId" />
+
+    <button type="submit" class="btn btn-primary">Delete</button>
+    <a asp-controller="ManageClub" asp-action="List" class="btn btn-primary">Cancel</a>
+</form>
+

@@ -1,0 +1,37 @@
+﻿@model List<Equinox.Models.User>
+@{
+    ViewData["Title"] = "My User";
+}
+<div class="mb-2">
+    <a asp-controller="ManageUser" asp-action="Add">Add New User</a>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>PhoneNumber</th>
+            <th>Email</th>
+            <th>DOB</th>
+            <th>IsCoach</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model) {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.PhoneNumber</td>
+                <td>@user.Email</td>
+                <td>@user.DOB</td>
+                <td>@user.IsCoach</td>
+                <td>
+                    <a asp-controller="ManageUser" asp-action="Edit"
+                       asp-route-id="@user.UserId">Edit</a>
+                    <a asp-controller="ManageUser" asp-action="Delete"
+                       asp-route-id="@user.UserId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

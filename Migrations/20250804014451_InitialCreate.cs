@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -18,7 +19,8 @@ namespace Equinox.Migrations
                 {
                     ClassCategoryId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false)
+                    Name = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
+                    Image = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,7 +33,7 @@ namespace Equinox.Migrations
                 {
                     ClubId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     PhoneNumber = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
@@ -45,10 +47,10 @@ namespace Equinox.Migrations
                 {
                     UserId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     PhoneNumber = table.Column<string>(type: "TEXT", nullable: false),
                     Email = table.Column<string>(type: "TEXT", nullable: false),
-                    DOB = table.Column<string>(type: "TEXT", nullable: false),
+                    DOB = table.Column<DateTime>(type: "TEXT", nullable: false),
                     IsCoach = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
@@ -95,14 +97,14 @@ namespace Equinox.Migrations
 
             migrationBuilder.InsertData(
                 table: "ClassCategory",
-                columns: new[] { "ClassCategoryId", "Name" },
+                columns: new[] { "ClassCategoryId", "Image", "Name" },
                 values: new object[,]
                 {
-                    { 1, "Boxing" },
-                    { 2, "Yoga" },
-                    { 3, "HIIT" },
-                    { 4, "Strength" },
-                    { 5, "Dancing" }
+                    { 1, "Boxing", "Boxing" },
+                    { 2, "Yoga", "Yoga" },
+                    { 3, "HIIT", "HIIT" },
+                    { 4, "Strength", "Strength" },
+                    { 5, "Dancing", "Dancing" }
                 });
 
             migrationBuilder.InsertData(
@@ -120,8 +122,8 @@ namespace Equinox.Migrations
                 columns: new[] { "UserId", "DOB", "Email", "IsCoach", "Name", "PhoneNumber" },
                 values: new object[,]
                 {
-                    { 1, "07/08/2000", "john.smith@equinox.com", true, "John Smith", "555-000-0001" },
-                    { 2, "07/08/2001", "emily.johnson@equinox.com", true, "Emily Johnson", "555-000-0002" }
+                    { 1, new DateTime(2000, 8, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), "john.smith@equinox.com", true, "John Smith", "555-000-0001" },
+                    { 2, new DateTime(2001, 8, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), "emily.johnson@equinox.com", true, "Emily Johnson", "555-000-0002" }
                 });
 
             migrationBuilder.InsertData(

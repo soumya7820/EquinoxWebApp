@@ -43,7 +43,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Jul 2025 15:06:34 GMT"
+          "Value": "Mon, 04 Aug 2025 01:40:56 GMT"
         },
         {
           "Name": "Vary",
@@ -92,7 +92,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Jul 2025 15:06:34 GMT"
+          "Value": "Mon, 04 Aug 2025 01:40:56 GMT"
         }
       ],
       "EndpointProperties": [
@@ -141,7 +141,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Jul 2025 15:06:34 GMT"
+          "Value": "Mon, 04 Aug 2025 01:40:56 GMT"
         },
         {
           "Name": "Vary",
@@ -204,7 +204,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Jul 2025 15:06:34 GMT"
+          "Value": "Mon, 04 Aug 2025 01:40:56 GMT"
         },
         {
           "Name": "Vary",
@@ -245,7 +245,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Jul 2025 15:06:34 GMT"
+          "Value": "Mon, 04 Aug 2025 01:40:56 GMT"
         }
       ],
       "EndpointProperties": [
@@ -286,7 +286,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 27 Jul 2025 15:06:34 GMT"
+          "Value": "Mon, 04 Aug 2025 01:40:56 GMT"
         },
         {
           "Name": "Vary",
@@ -1303,6 +1303,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.65zrjowesk.js",
+      "AssetFile": "js/minimum-age.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002192982456"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "455"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "65zrjowesk"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok="
+        },
+        {
+          "Name": "label",
+          "Value": "js/minimum-age.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.65zrjowesk.js",
+      "AssetFile": "js/minimum-age.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "987"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "65zrjowesk"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok="
+        },
+        {
+          "Name": "label",
+          "Value": "js/minimum-age.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.65zrjowesk.js.gz",
+      "AssetFile": "js/minimum-age.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "455"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "65zrjowesk"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg="
+        },
+        {
+          "Name": "label",
+          "Value": "js/minimum-age.js.gz"
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.js",
+      "AssetFile": "js/minimum-age.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002192982456"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "455"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.js",
+      "AssetFile": "js/minimum-age.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "987"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.js.gz",
+      "AssetFile": "js/minimum-age.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "455"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg="
         }
       ]
     },

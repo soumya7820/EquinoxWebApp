@@ -12,6 +12,7 @@ builder.Services.AddRouting(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
 
 builder.Services.AddDbContext<EquinoxDbContext>(options =>

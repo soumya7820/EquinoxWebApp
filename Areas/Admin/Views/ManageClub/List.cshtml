@@ -1,0 +1,30 @@
+﻿@model List<Equinox.Models.Club>
+@{
+    ViewData["Title"] = "My Club";
+}
+<div class="mb-2">
+    <a asp-controller="ManageClub" asp-action="Add">Add New Club</a>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>PhoneNumber</th><th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var club in Model) { 
+            <tr>
+                <td>@club.Name</td>
+                <td>@club.PhoneNumber</td>
+                <td>
+                    <a asp-controller="ManageClub" asp-action="Edit"
+                       asp-route-id="@club.ClubId">Edit</a>
+                    <a asp-controller="ManageClub" asp-action="Delete"
+                       asp-route-id="@club.ClubId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

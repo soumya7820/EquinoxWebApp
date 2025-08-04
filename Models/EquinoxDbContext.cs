@@ -10,6 +10,7 @@ namespace Equinox.Models
         public DbSet<ClassCategory> ClassCategory { get; set; } = null!;
         public DbSet<Club> Club { get; set; } = null!;
         public DbSet<EquinoxClass> EquinoxClass { get; set; } = null!;
+        public DbSet<User> User { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -19,11 +20,11 @@ namespace Equinox.Models
                 new Club { ClubId = 3, Name = "Lincoln Park", PhoneNumber = "312-333-3333" }
             );
             modelBuilder.Entity<ClassCategory>().HasData(
-                new ClassCategory { ClassCategoryId = 1, Name = "Boxing" },
-                new ClassCategory { ClassCategoryId = 2, Name = "Yoga" },
-                new ClassCategory { ClassCategoryId = 3, Name = "HIIT" },
-                new ClassCategory { ClassCategoryId = 4, Name = "Strength" },
-                new ClassCategory { ClassCategoryId = 5, Name = "Dancing" }
+                new ClassCategory { ClassCategoryId = 1, Name = "Boxing", Image = "Boxing" },
+                new ClassCategory { ClassCategoryId = 2, Name = "Yoga", Image = "Yoga" },
+                new ClassCategory { ClassCategoryId = 3, Name = "HIIT", Image = "HIIT" },
+                new ClassCategory { ClassCategoryId = 4, Name = "Strength" , Image = "Strength" },
+                new ClassCategory { ClassCategoryId = 5, Name = "Dancing" , Image = "Dancing" }
             );
             modelBuilder.Entity<User>().HasData(
                 new User
@@ -32,7 +33,7 @@ namespace Equinox.Models
                     Name = "John Smith",
                     PhoneNumber = "555-000-0001",
                     Email = "john.smith@equinox.com",
-                    DOB = "07/08/2000",
+                    DOB = new DateTime(2000, 8, 7),
                     IsCoach = true
                 },
                 new User
@@ -41,7 +42,7 @@ namespace Equinox.Models
                     Name = "Emily Johnson",
                     PhoneNumber = "555-000-0002",
                     Email = "emily.johnson@equinox.com",
-                    DOB = "07/08/2001",
+                    DOB = new DateTime(2001, 8, 7),
                     IsCoach = true
                 }
             );

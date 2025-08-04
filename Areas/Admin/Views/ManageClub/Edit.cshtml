@@ -1,0 +1,26 @@
+﻿@model Equinox.Models.Club
+@{
+    string title = ViewBag.Action + " Club";
+    ViewData["Title"] = title;
+}
+
+<h2>@title</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Name</label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="PhoneNumber" class="form-label">PhoneNumber</label>
+        <input asp-for="PhoneNumber" class="form-control">
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+
+    <input type="hidden" asp-for="ClubId" />
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-controller="ManageClub" asp-action="List" class="btn btn-primary">Cancel</a>
+</form>
