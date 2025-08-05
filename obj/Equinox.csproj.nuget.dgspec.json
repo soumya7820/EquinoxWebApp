@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\Equinox.csproj": {}
+    "C:\\Users\\mailv\\Downloads\\Equinox_Phase_3\\Equinox\\Equinox.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\Equinox.csproj": {
+    "C:\\Users\\mailv\\Downloads\\Equinox_Phase_3\\Equinox\\Equinox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\Equinox.csproj",
+        "projectUniqueName": "C:\\Users\\mailv\\Downloads\\Equinox_Phase_3\\Equinox\\Equinox.csproj",
         "projectName": "Equinox",
-        "projectPath": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\Equinox.csproj",
-        "packagesPath": "C:\\Users\\yache\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\",
+        "projectPath": "C:\\Users\\mailv\\Downloads\\Equinox_Phase_3\\Equinox\\Equinox.csproj",
+        "packagesPath": "C:\\Users\\mailv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mailv\\Downloads\\Equinox_Phase_3\\Equinox\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\yache\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mailv\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -93,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

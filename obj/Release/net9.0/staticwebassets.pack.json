@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\js\\minimum-age.js",
+      "PackagePath": "staticwebassets\\js\\minimum-age.js"
+    },
+    {
       "Id": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

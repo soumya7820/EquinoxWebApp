@@ -17,101 +17,101 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Equinox
 build_property.RootNamespace = Equinox
-build_property.ProjectDir = C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\
+build_property.ProjectDir = C:\Users\mailv\Downloads\Equinox_Phase_3\Equinox\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox
+build_property.MSBuildProjectDirectory = C:\Users\mailv\Downloads\Equinox_Phase_3\Equinox
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/Home/Index.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/ManageClassCategory/Delete.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/ManageClassCategory/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFuYWdlQ2xhc3NDYXRlZ29yeVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/ManageClassCategory/Edit.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/ManageClassCategory/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFuYWdlQ2xhc3NDYXRlZ29yeVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/ManageClassCategory/List.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/ManageClassCategory/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFuYWdlQ2xhc3NDYXRlZ29yeVxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/ManageClub/Delete.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/ManageClub/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFuYWdlQ2x1YlxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/ManageClub/Edit.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/ManageClub/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFuYWdlQ2x1YlxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/ManageClub/List.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/ManageClub/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFuYWdlQ2x1YlxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/ManageUser/Delete.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/ManageUser/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFuYWdlVXNlclxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/ManageUser/Edit.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/ManageUser/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFuYWdlVXNlclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/ManageUser/List.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/ManageUser/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFuYWdlVXNlclxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Views/EquiClass/Cart.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Views/EquiClass/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aUNsYXNzXENhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Views/EquiClass/Detail.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Views/EquiClass/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aUNsYXNzXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Views/EquiClass/Index.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Views/EquiClass/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aUNsYXNzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Views/Home/Index.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Views/Shared/_MainLayout.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Views/Shared/_MainLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Views/_ViewImports.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Views/_ViewStart.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yache/OneDrive/Desktop/Usha/Equinox/Equinox/Views/Shared/_Layout.cshtml]
+[C:/Users/mailv/Downloads/Equinox_Phase_3/Equinox/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-bxgfbdf3n1

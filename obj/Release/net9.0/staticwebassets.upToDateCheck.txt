@@ -12,6 +12,7 @@ C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\wwwroot\lib\jquery-validati
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\wwwroot\js\site.js
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\wwwroot\js\minimum-age.js
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\wwwroot\lib\jquery\dist\jquery.min.js
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\wwwroot\lib\bootstrap\dist\js\bootstrap.js
@@ -67,6 +68,7 @@ wwwroot\Images\Equinox-bg.jpeg
 wwwroot\Images\EquinoxLabel.png
 wwwroot\Images\hiit.png
 wwwroot\Images\yoga.png
+wwwroot\js\minimum-age.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
