@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "orsLLJo18sI=",
+  "dgSpecHash": "HVBL4JzZMgw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mailv\\Downloads\\Equinox_Phase_3\\Equinox\\Equinox.csproj",
+  "projectFilePath": "C:\\Users\\mailv\\EquinoxWebApp\\Equinox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mailv\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\mailv\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

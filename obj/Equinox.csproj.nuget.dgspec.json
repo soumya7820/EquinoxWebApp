@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mailv\\Downloads\\Equinox_Phase_3\\Equinox\\Equinox.csproj": {}
+    "C:\\Users\\mailv\\EquinoxWebApp\\Equinox.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mailv\\Downloads\\Equinox_Phase_3\\Equinox\\Equinox.csproj": {
+    "C:\\Users\\mailv\\EquinoxWebApp\\Equinox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mailv\\Downloads\\Equinox_Phase_3\\Equinox\\Equinox.csproj",
+        "projectUniqueName": "C:\\Users\\mailv\\EquinoxWebApp\\Equinox.csproj",
         "projectName": "Equinox",
-        "projectPath": "C:\\Users\\mailv\\Downloads\\Equinox_Phase_3\\Equinox\\Equinox.csproj",
+        "projectPath": "C:\\Users\\mailv\\EquinoxWebApp\\Equinox.csproj",
         "packagesPath": "C:\\Users\\mailv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mailv\\Downloads\\Equinox_Phase_3\\Equinox\\obj\\",
+        "outputPath": "C:\\Users\\mailv\\EquinoxWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mailv\\AppData\\Roaming\\NuGet\\NuGet.Config"
