@@ -1,4 +1,4 @@
-using Equinox.Models;
+using Equinox.Models.DataLayer;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5qBhN/hbJnSqSXO5sP25xO0mRvFZSjIiJqWW4weH0Eo=",
+  "Hash": "UKTyHQnavMee5bRLzs7ohS8lxE75axzf0ZoVstPemhA=",
   "Source": "Equinox",
   "BasePath": "_content/Equinox",
   "Mode": "Default",
@@ -309,6 +309,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\6st8fwsp6r-65zrjowesk.gz",
+      "SourceId": "Equinox",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\",
+      "BasePath": "_content/Equinox",
+      "RelativePath": "js/minimum-age#[.{fingerprint=65zrjowesk}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\js\\minimum-age.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "vshwmzbzul",
+      "Integrity": "4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\js\\minimum-age.js"
     },
     {
       "Identity": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\75hpmnidfs-o1o13a6vjx.gz",
@@ -1401,6 +1422,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\publish\\6st8fwsp6r-65zrjowesk.br",
+      "SourceId": "Equinox",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\publish\\",
+      "BasePath": "_content/Equinox",
+      "RelativePath": "js/minimum-age#[.{fingerprint=65zrjowesk}]?.js.br",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\js\\minimum-age.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "Fingerprint": "upzz56kw5w",
+      "Integrity": "biNcB7UzP/meDoWv7VJVqojgC+0hjJ4Ehow0we5xZKs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\js\\minimum-age.js"
     },
     {
       "Identity": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\publish\\75hpmnidfs-o1o13a6vjx.br",
@@ -2892,6 +2934,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\yoga.png"
+    },
+    {
+      "Identity": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\js\\minimum-age.js",
+      "SourceId": "Equinox",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\",
+      "BasePath": "_content/Equinox",
+      "RelativePath": "js/minimum-age#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "65zrjowesk",
+      "Integrity": "VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\minimum-age.js"
     },
     {
       "Identity": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\js\\site.js",
@@ -6639,6 +6702,520 @@
         {
           "Name": "integrity",
           "Value": "sha256-wTfi76H1GRY4JqlsRRxStJfNEIxEUZp2wlxBBcgdk3g="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.65zrjowesk.js",
+      "AssetFile": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\6st8fwsp6r-65zrjowesk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002192982456"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "455"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "65zrjowesk"
+        },
+        {
+          "Name": "label",
+          "Value": "js/minimum-age.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.65zrjowesk.js",
+      "AssetFile": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\publish\\6st8fwsp6r-65zrjowesk.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.002570694087"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "388"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"biNcB7UzP/meDoWv7VJVqojgC+0hjJ4Ehow0we5xZKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "65zrjowesk"
+        },
+        {
+          "Name": "label",
+          "Value": "js/minimum-age.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.65zrjowesk.js",
+      "AssetFile": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\js\\minimum-age.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "987"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "65zrjowesk"
+        },
+        {
+          "Name": "label",
+          "Value": "js/minimum-age.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.65zrjowesk.js.br",
+      "AssetFile": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\publish\\6st8fwsp6r-65zrjowesk.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "388"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"biNcB7UzP/meDoWv7VJVqojgC+0hjJ4Ehow0we5xZKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "65zrjowesk"
+        },
+        {
+          "Name": "label",
+          "Value": "js/minimum-age.js.br"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-biNcB7UzP/meDoWv7VJVqojgC+0hjJ4Ehow0we5xZKs="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.65zrjowesk.js.gz",
+      "AssetFile": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\6st8fwsp6r-65zrjowesk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "455"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "65zrjowesk"
+        },
+        {
+          "Name": "label",
+          "Value": "js/minimum-age.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.js",
+      "AssetFile": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\6st8fwsp6r-65zrjowesk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002192982456"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "455"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.js",
+      "AssetFile": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\publish\\6st8fwsp6r-65zrjowesk.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.002570694087"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "388"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"biNcB7UzP/meDoWv7VJVqojgC+0hjJ4Ehow0we5xZKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.js",
+      "AssetFile": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\wwwroot\\js\\minimum-age.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "987"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.js.br",
+      "AssetFile": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\publish\\6st8fwsp6r-65zrjowesk.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "388"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"biNcB7UzP/meDoWv7VJVqojgC+0hjJ4Ehow0we5xZKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-biNcB7UzP/meDoWv7VJVqojgC+0hjJ4Ehow0we5xZKs="
+        }
+      ]
+    },
+    {
+      "Route": "js/minimum-age.js.gz",
+      "AssetFile": "C:\\Users\\yache\\OneDrive\\Desktop\\Usha\\Equinox\\Equinox\\obj\\Release\\net9.0\\compressed\\6st8fwsp6r-65zrjowesk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "455"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 01 Aug 2025 15:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4SsWDuAl1mOjKMGFYpEzDG9IGo77XJldnjAIkPCm5vg="
         }
       ]
     },

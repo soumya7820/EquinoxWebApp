@@ -1,4 +1,6 @@
-﻿using Equinox.Models;
+﻿using Equinox.Models.DataLayer;
+using Equinox.Models.DataLayer.Repositories;
+using Equinox.Models.DomainModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Equinox.Areas.Admin.Controllers
@@ -7,22 +9,55 @@ namespace Equinox.Areas.Admin.Controllers
     [Route("Admin/[controller]/[action]")]
     public class ManageClassCategoryController : Controller
     {
-        private EquinoxDbContext context { get; set; }
-        public ManageClassCategoryController(EquinoxDbContext ctx) => context = ctx;
-        public IActionResult List()
-        {
-            var classCategories = context.ClassCategory
-                .OrderBy(m => m.Name)
-                .ToList();
+        private Repository<ClassCategory> data { get; set; }
+        private Repository<Booking> bookingData { get; set; }
 
+        public ManageClassCategoryController(EquinoxDbContext ctx)
+        {
+            data = new Repository<ClassCategory>(ctx);
+            bookingData = new Repository<Booking>(ctx);
+        }
+
+        public ViewResult List()
+        {
+            var classCategories = data.List(new QueryOptions<ClassCategory>
+            {
+                OrderBy = c => c.Name
+            });
             return View(classCategories);
         }
 
+        // Add
         [HttpGet]
-        public IActionResult Add()
+        public ViewResult Add()
         {
-            ViewBag.action = "Add";
+            ViewBag.Action = "Add";
             return View("Edit", new ClassCategory());
+        }
+
+        [HttpPost]
+        public IActionResult Add(ClassCategory classCategory)
+        {
+            if (ModelState.IsValid)
+            {
+                data.Insert(classCategory);
+                data.Save();
+                TempData["message"] = $"{classCategory.Name} Added Successfully";
+                return RedirectToAction("List");
+            }
+            else
+            {
+                ViewBag.Action = "Add";
+                return View("Edit", classCategory);
+            }
+        }
+
+        // Edit
+        [HttpGet]
+        public ViewResult Edit(int id)
+        {
+            ViewBag.Action = "Edit";
+            return View(data.Get(id));
         }
 
         [HttpPost]
@@ -30,50 +65,47 @@ namespace Equinox.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (classCategory.ClassCategoryId == 0)
-                {
-                    context.ClassCategory.Add(classCategory);
-                    TempData["message"] = $"{classCategory.Name} Added Successfully";
-                }
-                else
-                {
-                    context.ClassCategory.Update(classCategory);
-                    TempData["message"] = $"{classCategory.Name} Updated Successfully";
-                }
-                context.SaveChanges();
+                data.Update(classCategory);
+                data.Save();
+                TempData["message"] = $"{classCategory.Name} Updated Successfully";
                 return RedirectToAction("List");
             }
             else
             {
-                ViewBag.action = (classCategory.ClassCategoryId == 0) ? "Add" : "Edit";
-                return View("Edit", classCategory);
+                ViewBag.Action = "Edit";
+                return View(classCategory);
             }
         }
 
+        // Delete
         [HttpGet]
-        public IActionResult Edit(int id)
+        public IActionResult Delete(int id)
         {
-            ViewBag.action = "Edit";
-            var classCategory = context.ClassCategory.Find(id);
+            var classCategory = data.Get(id);
+
+            // Check if this category has bookings
+            bool hasBookings = bookingData.List(new QueryOptions<Booking>
+            {
+                Includes = "EquinoxClass",
+                Where = b => b.EquinoxClass.ClassCategoryId == id
+            }).Any();
+
+            if (hasBookings)
+            {
+                TempData["message"] = $"Cannot delete {classCategory.Name} because it has bookings in classes.";
+                return RedirectToAction("List");
+            }
+
             return View(classCategory);
         }
 
         [HttpPost]
-        public IActionResult Delete(ClassCategory classCategory)
+        public RedirectToActionResult Delete(ClassCategory classCategory)
         {
-            context.ClassCategory.Remove(classCategory);
+            data.Delete(classCategory);
+            data.Save();
             TempData["message"] = $"{classCategory.Name} Deleted Successfully";
-            context.SaveChanges();
             return RedirectToAction("List");
         }
-
-        [HttpGet]
-        public IActionResult Delete(int id)
-        {
-            ClassCategory classCategory = context.ClassCategory
-                    .FirstOrDefault(p => p.ClassCategoryId == id) ?? new ClassCategory();
-            return View(classCategory);
-        }
-
     }
 }

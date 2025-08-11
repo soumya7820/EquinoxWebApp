@@ -1,6 +1,7 @@
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\Equinox.exe
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\appsettings.Development.json
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\appsettings.json
+C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\ClassList.db
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\Equinox.dll
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\Equinox.runtimeconfig.json
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\Equinox.pdb
@@ -27,6 +28,7 @@ C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\O
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\Microsoft.DotNet.Scaffolding.Shared.dll
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.Design.dll
 C:\Users\yache\OneDrive\Desktop\Usha\Equinox\Equinox\obj\Release\net9.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Sqlite.dll

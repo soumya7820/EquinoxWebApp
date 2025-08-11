@@ -1,4 +1,6 @@
-﻿using Equinox.Models;
+﻿using Equinox.Models.DataLayer;
+using Equinox.Models.DomainModels;
+using Equinox.Models.Validations;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Equinox.Areas.Admin.Controllers
@@ -81,10 +83,26 @@ namespace Equinox.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Delete(User user)
         {
-            context.User.Remove(user);
-            TempData["message"] = $"{user.Name} Deleted Successfully";
+            var existinguser = context.User.FirstOrDefault(c => c.UserId == user.UserId);
+            if (existinguser == null)
+            {
+                TempData["message"] = "User not found.";
+                return RedirectToAction("List");
+            }
+
+            bool hasBookings = context.Booking.Any(b => b.EquinoxClass.UserId == user.UserId);
+
+            if (hasBookings)
+            {
+                TempData["message"] = $"Cannot delete {existinguser.Name} because it has bookings in classes.";
+                return RedirectToAction("List");
+            }
+
+            context.User.Remove(existinguser);
             context.SaveChanges();
-            return RedirectToAction("List", "ManageUser");
+
+            TempData["message"] = $"{existinguser.Name} Deleted Successfully";
+            return RedirectToAction("List");
         }
     }
 }

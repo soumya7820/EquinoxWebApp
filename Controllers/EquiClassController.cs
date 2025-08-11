@@ -1,16 +1,30 @@
 ﻿using System.Text.Json;
-using Equinox.Models;
+using Equinox.Models.Utils;
+using Equinox.Models.DataLayer;
+using Equinox.Models.DomainModels;
+using Equinox.Models.Infrastructure;
+using Equinox.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Equinox.Models.DataLayer.Repositories;
 
 namespace Equinox.Controllers
 {
     public class EquiClassController : Controller
     {
-        private EquinoxDbContext _context;
+        private readonly Repository<EquinoxClass> classRepo;
+        private readonly Repository<Club> clubRepo;
+        private readonly Repository<ClassCategory> categoryRepo;
+        private readonly Repository<Booking> bookingRepo;
+        private readonly EquinoxDbContext _context;
+
         public EquiClassController(EquinoxDbContext context)
         {
             _context = context;
+            classRepo = new Repository<EquinoxClass>(context);
+            clubRepo = new Repository<Club>(context);
+            categoryRepo = new Repository<ClassCategory>(context);
+            bookingRepo = new Repository<Booking>(context);
         }
 
         public ViewResult Index(EquinoxViewModel model)
@@ -23,8 +37,6 @@ namespace Equinox.Controllers
             var session = new EquinoxSession(HttpContext.Session);
             session.SetActiveClubs(model.ActiveClub);
             session.SetActiveClassCategory(model.ActiveClassCategory);
-            //var cart = EquinoxCookies.GetReservationItemsFromCookie(HttpContext.Request, "PreReservationCart");
-            //var cartCount = cart.Count;
             var cartCount = session.Bookings.Count;
 
             IQueryable<EquinoxClass> query = _context.EquinoxClass
@@ -52,6 +64,7 @@ namespace Equinox.Controllers
             };
             return View(equinoxViewModel);
         }
+
         public IActionResult Detail(int id, DateTime? date)
         {
             var session = new EquinoxSession(HttpContext.Session);
@@ -73,134 +86,54 @@ namespace Equinox.Controllers
                 ActiveClassCategory = session.GetActiveClassCategory(),
             };
 
-            return View(viewModel); // Now this matches the view's @model declaration
+            return View(viewModel);
         }
 
         [HttpPost]
         public IActionResult BookClass(int id)
         {
             var session = new EquinoxSession(HttpContext.Session);
-            //var cart = HttpContext.Session.GetObject<List<Booking>>("Cart") ?? new List<Booking>();
-            var cart = session.Bookings;
-            var reservation = new Booking
+
+            var equinoxClass = classRepo.Get(id);
+            if (equinoxClass == null)
+            {
+                TempData["Error"] = "Class not found.";
+                return RedirectToAction("Index");
+            }
+
+            var booking = new Booking
             {
                 EquinoxClassId = id,
+                EquinoxClass = equinoxClass
             };
-            cart.Add(reservation);
-            HttpContext.Session.SetObject("Cart", cart);
 
+            bookingRepo.Insert(booking);
+            bookingRepo.Save();
+
+            var cart = session.Bookings;
+            cart.Add(booking);
+            HttpContext.Session.SetObject("Cart", cart);
 
             var cookieCart = new List<Booking>();
             if (Request.Cookies.TryGetValue("PreReservationCart", out var cookieData))
             {
                 cookieCart = JsonSerializer.Deserialize<List<Booking>>(cookieData) ?? new List<Booking>();
             }
+            cookieCart.Add(booking);
 
-            cookieCart.Add(new Booking
-            {
-                EquinoxClassId = id,
-            });
-
-            var options = new CookieOptions
+            Response.Cookies.Append("PreReservationCart", JsonSerializer.Serialize(cookieCart), new CookieOptions
             {
                 Expires = DateTime.Now.AddDays(7),
                 IsEssential = true
-            };
-
-            Response.Cookies.Append("PreReservationCart", JsonSerializer.Serialize(cookieCart), options);
+            });
 
             TempData["Message"] = "Booking done successfully!";
-            return RedirectToAction("Index", "EquiClass", new
+            return RedirectToAction("Index", new
             {
                 ActiveClub = session.GetActiveClubs(),
-                ActiveClassCategory = session.GetActiveClassCategory(),
+                ActiveClassCategory = session.GetActiveClassCategory()
             });
         }
-
-        //[HttpPost]
-        //public IActionResult BookClass(int id)
-        //{
-        //    var session = new EquinoxSession(HttpContext.Session);
-
-        //    var cart = session.Bookings;
-        //    var reservation = new Booking { EquinoxClassId = id };
-        //    cart.Add(reservation);
-        //    session.Bookings = cart;
-
-        //    //var cookieCart = new List<Booking>();
-        //    //if (Request.Cookies.TryGetValue("PreReservationCart", out var cookieData))
-        //    //{
-        //    //    cookieCart = JsonSerializer.Deserialize<List<Booking>>(cookieData) ?? new List<Booking>();
-        //    //}
-        //    var cookieCart = EquinoxCookies.GetReservationItemsFromCookie(Request, "PreReservationCart");
-
-
-        //    cookieCart.Add(new Booking { EquinoxClassId = id });
-
-        //    //var options = new CookieOptions
-        //    //{
-        //    //    Expires = DateTime.Now.AddDays(7),
-        //    //    IsEssential = true
-        //    //};
-
-        //    //Response.Cookies.Append("PreReservationCart", JsonSerializer.Serialize(cookieCart), options);
-        //    EquinoxCookies.SetReservationItemsCookie(Response, "PreReservationCart", cookieCart);
-
-
-        //    TempData["Message"] = "Booking done successfully!";
-        //    return RedirectToAction("Index", "EquiClass", new
-        //    {
-        //        ActiveClub = session.GetActiveClubs(),
-        //        ActiveClassCategory = session.GetActiveClassCategory(),
-        //    });
-        //}
-
-
-
-        //public IActionResult Cart()
-        //{
-        //    List<Booking> cart = new List<Booking>();
-
-        //    var session = new EquinoxSession(HttpContext.Session);
-        //    string activeClub = session.GetActiveClubs();
-        //    string activeClassCategory = session.GetActiveClassCategory();
-
-        //    if (Request.Cookies.TryGetValue("PreReservationCart", out var cookieData))
-        //    {
-        //        var cookieCart = JsonSerializer.Deserialize<List<Booking>>(cookieData) ?? new List<Booking>();
-
-        //        cart = new List<Booking>();
-
-        //        foreach (var item in cookieCart)
-        //        {
-        //            var equiClass = _context.EquinoxClass
-        //                .Include(m => m.Club)
-        //                .Include(m => m.ClassCategory)
-        //                .Include(t => t.User)
-        //                .FirstOrDefault(x => x.EquinoxClassId == item.EquinoxClassId);
-
-        //            if (equiClass != null)
-        //            {
-        //                cart.Add(new Booking
-        //                {
-        //                    EquinoxClassId = item.EquinoxClassId,
-        //                    EquinoxClass = equiClass,
-        //                });
-        //            }
-        //        }
-
-        //        HttpContext.Session.SetObject("Cart", cart);
-        //    }
-
-        //    var viewModel = new EquinoxViewModel
-        //    {
-        //        Bookings = cart,
-        //        ActiveClub = activeClub,
-        //        ActiveClassCategory = activeClassCategory
-        //    };
-
-        //    return View(viewModel);
-        //}
 
         public IActionResult Cart()
         {
@@ -227,62 +160,25 @@ namespace Equinox.Controllers
                         cart.Add(new Booking
                         {
                             EquinoxClassId = item.EquinoxClassId,
-                            EquinoxClass = equiClass,
+                            EquinoxClass = equiClass
                         });
                     }
                 }
 
-                // Store in session using EquinoxSession wrapper
                 session.Bookings = cart;
             }
             else
             {
-                // No cookie - try loading from session
                 cart = session.Bookings;
             }
 
-            var viewModel = new EquinoxViewModel
+            return View(new EquinoxViewModel
             {
                 Bookings = cart,
                 ActiveClub = activeClub,
                 ActiveClassCategory = activeClassCategory
-            };
-
-            return View(viewModel);
+            });
         }
-
-
-        //public IActionResult RemoveFromCart(int id)
-        //{
-        //    var cart = HttpContext.Session.GetObject<List<Booking>>("Cart") ?? new List<Booking>();
-        //    var itemToRemove = cart.FirstOrDefault(r => r.EquinoxClassId == id);
-        //    if (itemToRemove != null)
-        //    {
-        //        cart.Remove(itemToRemove);
-        //        HttpContext.Session.SetObject("Cart", cart);
-        //    }
-
-        //    // Remove from Cookie
-        //    var cookieCartRaw = Request.Cookies["PreReservationCart"];
-        //    if (!string.IsNullOrEmpty(cookieCartRaw))
-        //    {
-        //        var cookieCart = JsonSerializer.Deserialize<List<Booking>>(cookieCartRaw)
-        //                ?? new List<Booking>();
-        //        var cookieItem = cookieCart.FirstOrDefault(r => r.EquinoxClassId == id);
-        //        if (cookieItem != null)
-        //        {
-        //            cookieCart.Remove(cookieItem);
-        //            // Update cookie
-        //            Response.Cookies.Append("PreReservationCart", JsonSerializer.Serialize(cookieCart), new CookieOptions
-        //            {
-        //                Expires = DateTime.Now.AddDays(7),
-        //                IsEssential = true
-        //            });
-        //        }
-        //    }
-
-        //    return RedirectToAction("Cart");
-        //}
 
         public IActionResult RemoveFromCart(int id)
         {
@@ -296,16 +192,13 @@ namespace Equinox.Controllers
                 session.Bookings = cart;
             }
 
-            // Remove from Cookie
             if (Request.Cookies.TryGetValue("PreReservationCart", out var cookieCartRaw))
             {
-                var cookieCart = JsonSerializer.Deserialize<List<Booking>>(cookieCartRaw)
-                                 ?? new List<Booking>();
+                var cookieCart = JsonSerializer.Deserialize<List<Booking>>(cookieCartRaw) ?? new List<Booking>();
                 var cookieItem = cookieCart.FirstOrDefault(r => r.EquinoxClassId == id);
                 if (cookieItem != null)
                 {
                     cookieCart.Remove(cookieItem);
-
                     Response.Cookies.Append("PreReservationCart", JsonSerializer.Serialize(cookieCart), new CookieOptions
                     {
                         Expires = DateTime.Now.AddDays(7),
@@ -316,7 +209,5 @@ namespace Equinox.Controllers
 
             return RedirectToAction("Cart");
         }
-
-
     }
 }

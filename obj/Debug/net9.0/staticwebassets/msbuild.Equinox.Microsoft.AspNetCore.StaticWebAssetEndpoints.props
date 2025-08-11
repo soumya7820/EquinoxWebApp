@@ -16,13 +16,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Equinox.lnc6r3e4r5.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-b7PsS8UZLAHMOZi3MQ7HkxhGvnMNYmTZ8DFv4XDZm8A="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1125"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022b7PsS8UZLAHMOZi3MQ7HkxhGvnMNYmTZ8DFv4XDZm8A=\u0022"},{"Name":"Last-Modified","Value":"Mon, 04 Aug 2025 01:40:56 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1125"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022b7PsS8UZLAHMOZi3MQ7HkxhGvnMNYmTZ8DFv4XDZm8A=\u0022"},{"Name":"Last-Modified","Value":"Sun, 10 Aug 2025 15:27:43 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Equinox/Equinox.lnc6r3e4r5.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Equinox.lnc6r3e4r5.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lnc6r3e4r5"},{"Name":"integrity","Value":"sha256-b7PsS8UZLAHMOZi3MQ7HkxhGvnMNYmTZ8DFv4XDZm8A="},{"Name":"label","Value":"_content/Equinox/Equinox.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1125"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022b7PsS8UZLAHMOZi3MQ7HkxhGvnMNYmTZ8DFv4XDZm8A=\u0022"},{"Name":"Last-Modified","Value":"Mon, 04 Aug 2025 01:40:56 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1125"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022b7PsS8UZLAHMOZi3MQ7HkxhGvnMNYmTZ8DFv4XDZm8A=\u0022"},{"Name":"Last-Modified","Value":"Sun, 10 Aug 2025 15:27:43 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Equinox/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>

@@ -96,6 +96,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-wTfi76H1GRY4JqlsRRxStJfNEIxEUZp2wlxBBcgdk3g="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"145017"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022wTfi76H1GRY4JqlsRRxStJfNEIxEUZp2wlxBBcgdk3g=\u0022"},{"Name":"Last-Modified","Value":"Sat, 26 Jul 2025 22:40:05 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Equinox/js/minimum-age.65zrjowesk.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\minimum-age.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"65zrjowesk"},{"Name":"integrity","Value":"sha256-VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok="},{"Name":"label","Value":"_content/Equinox/js/minimum-age.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"987"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=\u0022"},{"Name":"Last-Modified","Value":"Fri, 01 Aug 2025 15:46:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Equinox/js/minimum-age.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\minimum-age.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"987"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022VkKwISJIYrm1jkpy7ASPC169/R5LRNCqyJSxpLbWWok=\u0022"},{"Name":"Last-Modified","Value":"Fri, 01 Aug 2025 15:46:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Equinox/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

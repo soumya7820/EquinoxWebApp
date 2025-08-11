@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Equinox.Models;
+using Equinox.Models.DataLayer;
+using Equinox.Models.Validations;
 
 namespace Equinox.Controllers
 {

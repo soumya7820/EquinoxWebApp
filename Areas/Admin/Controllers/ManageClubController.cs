@@ -1,4 +1,6 @@
-﻿using Equinox.Models;
+﻿using Equinox.Models.DataLayer;
+using Equinox.Models.DataLayer.Repositories;
+using Equinox.Models.DomainModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Equinox.Areas.Admin.Controllers
@@ -7,22 +9,55 @@ namespace Equinox.Areas.Admin.Controllers
     [Route("Admin/[controller]/[action]")]
     public class ManageClubController : Controller
     {
-        private EquinoxDbContext context { get; set; }
-        public ManageClubController(EquinoxDbContext ctx) => context = ctx;
-        public IActionResult List()
-        {
-            var clubs = context.Club
-                .OrderBy(m => m.Name)
-                .ToList();
+        private Repository<Club> clubRepo { get; set; }
+        private Repository<Booking> bookingRepo { get; set; }
 
+        public ManageClubController(EquinoxDbContext ctx)
+        {
+            clubRepo = new Repository<Club>(ctx);
+            bookingRepo = new Repository<Booking>(ctx);
+        }
+
+        public ViewResult List()
+        {
+            var clubs = clubRepo.List(new QueryOptions<Club>
+            {
+                OrderBy = c => c.Name
+            });
             return View(clubs);
         }
 
+        // Add
         [HttpGet]
-        public IActionResult Add()
+        public ViewResult Add()
         {
-            ViewBag.action = "Add";
+            ViewBag.Action = "Add";
             return View("Edit", new Club());
+        }
+
+        [HttpPost]
+        public IActionResult Add(Club club)
+        {
+            if (ModelState.IsValid)
+            {
+                clubRepo.Insert(club);
+                clubRepo.Save();
+                TempData["message"] = $"{club.Name} Added Successfully";
+                return RedirectToAction("List");
+            }
+            else
+            {
+                ViewBag.Action = "Add";
+                return View("Edit", club);
+            }
+        }
+
+        // Edit
+        [HttpGet]
+        public ViewResult Edit(int id)
+        {
+            ViewBag.Action = "Edit";
+            return View(clubRepo.Get(id));
         }
 
         [HttpPost]
@@ -30,50 +65,47 @@ namespace Equinox.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (club.ClubId == 0)
-                {
-                    context.Club.Add(club);
-                    TempData["message"] = $"{club.Name} Added Successfully";
-                }
-                else
-                {
-                    context.Club.Update(club);
-                    TempData["message"] = $"{club.Name} Updated Successfully";
-
-                }
-                context.SaveChanges();
+                clubRepo.Update(club);
+                clubRepo.Save();
+                TempData["message"] = $"{club.Name} Updated Successfully";
                 return RedirectToAction("List");
             }
             else
             {
-                ViewBag.action = (club.ClubId == 0) ? "Add" : "Edit";
+                ViewBag.Action = "Edit";
                 return View("Edit", club);
             }
         }
 
+        // Delete
         [HttpGet]
-        public IActionResult Edit(int id)
+        public IActionResult Delete(int id)
         {
-            ViewBag.action = "Edit";
-            var club = context.Club.Find(id);
+            var club = clubRepo.Get(id);
+
+            // Check if any bookings exist for this club
+            bool hasBookings = bookingRepo.List(new QueryOptions<Booking>
+            {
+                Includes = "EquinoxClass",
+                Where = b => b.EquinoxClass.ClubId == id
+            }).Any();
+
+            if (hasBookings)
+            {
+                TempData["message"] = $"Cannot delete {club.Name} because it has bookings in classes.";
+                return RedirectToAction("List");
+            }
+
             return View(club);
         }
 
         [HttpPost]
-        public IActionResult Delete(Club club)
+        public RedirectToActionResult Delete(Club club)
         {
-            context.Club.Remove(club);
+            clubRepo.Delete(club);
+            clubRepo.Save();
             TempData["message"] = $"{club.Name} Deleted Successfully";
-            context.SaveChanges();
             return RedirectToAction("List");
-        }
-
-        [HttpGet]
-        public IActionResult Delete(int id)
-        {
-            Club club = context.Club
-                    .FirstOrDefault(p => p.ClubId == id) ?? new Club();
-            return View(club);
         }
     }
 }
